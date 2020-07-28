@@ -9,19 +9,20 @@
 
 body
 {
-    background: hsl(210, 46%, 95%);
+    background: hsl(210, 46%, 95%); 
 }
 
 .container 
 {
-    display: flex;
-    border: 1px solid hsl(210, 46%, 95%);
+    display: flex; 
     border-radius: 10px;  
     position: absolute;
     top: 200px;
-    left: 270px;
-    width: 53%;
+    left: 300px;
+    width: 700px;
+    min-width: 750px;
     background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .container .imgBox 
@@ -80,6 +81,7 @@ body
 .container .content .profile p 
 {
     margin-top: 5px;
+    margin-right: 70px;
 }
 
 .container .content .profile p span 
@@ -88,11 +90,133 @@ body
     color: hsl(217, 19%, 35%);
 }
 
-.container .content .profile #share 
+.container .content .profile .popup 
 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     width: 34px;
     height: 34px;
     padding: 10px;
     border-radius: 50%;
-    margin-left: 120px;
+    margin-left: 10px;
+    background: hsl(210, 46%, 95%);
+}
+ 
+.container .content .profile .popup:hover 
+{ 
+    background: hsl(217, 19%, 35%);
+}
+
+.container .content .profile .popup:active
+{
+    background: hsl(217, 19%, 35%);
+}
+
+.container .content .profile .popup .popupText
+{
+    visibility: hidden; 
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 25px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.container .content .profile .popup .popupText:after 
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.container .content .profile .popup .show
+{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+} 
+
+.container .content .profile .popup .popupText ul
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.container .content .profile .popup .popupText ul li
+{
+    text-decoration: none;
+    list-style: none;
+    color: hsl(210, 46%, 95%);;
+    background: hsl(217, 19%, 35%);
+    padding: 5px;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+@media(max-width: 1316px){
+
+    .container
+    {        
+       top: 5%;
+       left: 5%; 
+    }  
+
+} 
+
+@media(max-width: 901px){
+
+    .container
+    {
+        flex-direction: column;
+        min-width: 350px;
+        max-width: 350px;
+        left: 12%;
+    }
+
+    .container .imgBox 
+    {
+        width: 350px;
+        height: 292px;
+    }
+
+    .container .imgBox img 
+    {
+        width: 350px;
+        height: 292px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container .content .profile
+    {
+        padding: 2px;
+    }
+
+
+
 }
