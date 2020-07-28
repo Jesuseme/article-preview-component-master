@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+body
+{
+    background: hsl(210, 46%, 95%);
+}
+
+.container 
+{
+    display: flex;
+    border: 1px solid hsl(210, 46%, 95%);
+    border-radius: 10px;  
+    position: absolute;
+    top: 200px;
+    left: 270px;
+    width: 53%;
+    background: #fff;
+}
+
+.container .imgBox 
+{
+    width: 300px;
+    height: 250px;
+}
+
+.container .imgBox img 
+{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 0 0 10px;
+}
+
+.container .content 
+{ 
+    padding: 15px;
+}
+
+.container .content h3 
+{
+    color: hsl(217, 19%, 35%);
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.container .content .info 
+{
+    color: hsl(214, 17%, 51%);
+    padding: 20px 30px;
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.container .content .profile
+{
+    display: flex;
+    padding: 0 30px;
+    color: hsl(214, 17%, 51%);
+}
+
+.container .content .profile #profpic 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.container .content .profile p 
+{
+    margin-top: 5px;
+}
+
+.container .content .profile p span 
+{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.container .content .profile #share 
+{
+    width: 34px;
+    height: 34px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 120px;
+}
