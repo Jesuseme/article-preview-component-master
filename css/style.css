@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', Helvetica;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+body
+{
+    background: hsl(210, 46%, 95%); 
+}
+
+.container 
+{
+    display: flex; 
+    border-radius: 10px;  
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 700px;
+    min-width: 750px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .imgBox 
+{
+    width: 300px;
+    height: 250px;
+}
+
+.container .imgBox img 
+{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 0 0 10px;
+}
+
+.container .content 
+{ 
+    padding: 15px;
+}
+
+.container .content h3 
+{
+    color: hsl(217, 19%, 35%);
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.container .content .info 
+{
+    color: hsl(214, 17%, 51%);
+    padding: 18px 30px;
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.container .content .profile
+{
+    display: flex;
+    padding: 0 30px;
+    color: hsl(214, 17%, 51%);
+}
+
+.container .content .profile #profpic 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.container .content .profile p 
+{
+    margin-top: 5px;
+    margin-right: 70px;
+}
+
+.container .content .profile p span 
+{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.container .content .profile .popup 
+{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 34px;
+    height: 34px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background: hsl(210, 46%, 95%);
+}
+ 
+.container .content .profile .popup:hover 
+{ 
+    background: hsl(217, 19%, 35%);
+}
+
+.container .content .profile .popup:active
+{
+    background: hsl(217, 19%, 35%);
+}
+
+.container .content .profile .popup .popupText
+{
+    visibility: hidden; 
+    width: 250px;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 25px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.container .content .profile .popup .popupText:after 
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.container .content .profile .popup .show
+{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+} 
+
+.container .content .profile .popup .popupText ul
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.container .content .profile .popup .popupText ul li
+{
+    text-decoration: none;
+    list-style: none;
+    color: hsl(210, 46%, 95%);;
+    background: hsl(217, 19%, 35%);
+    padding: 5px 12px;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+@media(max-width: 1316px){
+
+    .container
+    {        
+       top: 5%;
+       left: 5%; 
+    }  
+
+} 
+
+@media(max-width: 901px){
+
+    .container
+    {
+        flex-direction: column;
+        min-width: 350px;
+        max-width: 350px;
+        left: 12%;
+    }
+
+    .container .imgBox 
+    {
+        width: 350px;
+        height: 292px;
+    }
+
+    .container .imgBox img 
+    {
+        width: 350px;
+        height: 292px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container .content .profile
+    {
+        padding: 2px;
+    }
+
+    .container .content .profile .popup #share
+    {
+        z-index: 1;
+    }
+
+
+    .container .content .profile .popup .show
+    {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        position: absolute;
+        bottom: -25px;
+        left: -190px;
+        padding: 15px;
+        width: 350px;
+        border-radius: 0 0 10px 10px;
+        z-index: 2;
+    } 
+
+    .container .content .profile .popup .popupText ul li
+    {
+        padding: 3px 18px; 
+    }
+
+
+
+
+
+}
