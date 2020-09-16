@@ -12,15 +12,15 @@
 body
 {
     background: hsl(210, 46%, 95%); 
+    display: flex;
+    justify-content: center;
 }
 
 .container 
 {
     display: flex; 
+    margin: 15rem;
     border-radius: 10px;  
-    position: absolute;
-    top: 200px;
-    left: 300px;
     width: 700px;
     min-width: 750px;
     background: #fff;
@@ -167,7 +167,7 @@ body
     list-style: none;
     color: hsl(210, 46%, 95%);;
     background: hsl(217, 19%, 35%);
-    padding: 5px 12px;
+    padding: 5px 5px;
 }
 
 /* Add animation (fade in the popup) */
@@ -180,18 +180,9 @@ body
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+ 
 
-@media(max-width: 1316px){
-
-    .container
-    {        
-       top: 5%;
-       left: 5%; 
-    }  
-
-} 
-
-@media(max-width: 901px){
+@media(max-width: 800px){
 
     .container
     {
@@ -199,6 +190,8 @@ body
         min-width: 350px;
         max-width: 350px;
         left: 12%;
+        overflow: hidden;
+        margin: 5rem;
     }
 
     .container .imgBox 
@@ -217,11 +210,12 @@ body
     .container .content .profile
     {
         padding: 2px;
-    }
-
+    } 
+    
     .container .content .profile .popup #share
     {
-        z-index: 1;
+        z-index: 1000;
+        position: absolute;
     }
 
 
@@ -243,9 +237,4 @@ body
     {
         padding: 3px 18px; 
     }
-
-
-
-
-
 }
